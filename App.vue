@@ -1,17 +1,24 @@
 <template>
-  <div id="app">
+  <div  class="container">
+    <ul class="list-group list-group-horizontal list-inline text-bold"> 
+         <li class="list-group-item"> <router-link to='/login'> Connexion </router-link></li>
+         <li class="list-group-item"> <router-link to='/home'> Home </router-link> </li>
+         <li class="list-group-item"> <router-link to='/'> Accueil </router-link> </li>
+    </ul>
+
+    <router-view> </router-view>
+
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
