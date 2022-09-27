@@ -1,17 +1,15 @@
-
 <template>
-    <div class="container"> <h1>************** ICI comonent StaffDirectory</h1> 
+    <div class="container"> <h1> {{ message }}</h1> 
         <div v-show="afficher" class="row">
             <div class="col-md">
                 <h3> Filters</h3>
                 <ul class="list-group"  >
-                    <li class="list-group-items"> <a href="#"
-                        @click="is_lyonnais"> Contacle Lyonnais </a>
+                    <li class="list-group-items"> <a href="#" > Contacle Lyonnais </a>
                     </li>
                 </ul>
             </div>
             <div class="col-md">
-                <h3> {{ message }} {{ contactes.length }} contactes</h3>
+                <h3> {{ message }} {{ contactes }} contactes</h3>
                 <hr>
                 <div class="container nice">
                     <table class="table table-striped table-bordered">
