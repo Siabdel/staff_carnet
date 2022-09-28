@@ -1,14 +1,12 @@
 <template>
     <div class="container-fluid">
         <h1> {{ msg }} </h1>
-        <StaffDirectory></StaffDirectory>
+        <router-link to="/users"> Mes contactes </router-link>
     </div>
 </template>
 
 <script>
-    
     import 'bootstrap/dist/css/bootstrap.min.css';
-    import StaffDirectory from '../components/StaffDirectory.vue';
 
     export default {
         name: "HomePage",
@@ -17,6 +15,5 @@
             contactes : [],
             searchBy : true,
         }),
-        components: {StaffDirectory} , 
     }
 </script>

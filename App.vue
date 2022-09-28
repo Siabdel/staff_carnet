@@ -1,9 +1,8 @@
 <template>
   <div  class="container">
     <ul class="list-group list-group-horizontal list-inline text-bold"> 
-         <li class="list-group-item"> <router-link to='/'> Accueil </router-link> </li>
          <li class="list-group-item"> <router-link to='/login'> Connexion </router-link></li>
-         <li class="list-group-item"> <router-link to='/home'> Home </router-link> </li>
+         <li class="list-group-item"> <router-link to='/'> Home </router-link> </li>
          <li class="list-group-item"> <router-link to='/users'> Contactes </router-link> </li>
     </ul>
 

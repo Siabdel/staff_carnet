@@ -8,7 +8,7 @@ export default new Vuex.Store({
 
     state : {
         users : [],
-        isLoadind : false,
+        isLoading : false,
         selectedUserId : null,
     },
     
@@ -26,7 +26,7 @@ export default new Vuex.Store({
             state.selectedUserId = id;
         },
         setIsLoading(state, bool){
-            state.isLoadind = bool;
+            state.isLoading = bool;
         },
     },
 
@@ -40,10 +40,12 @@ export default new Vuex.Store({
             return axios
             .get(url)
             .then(res => {
-                
-                commit("setUsers", { users : res.data.results})
-
-                commit("setIsLoading", false)
+                setTimeout( ()=>
+                  {
+                    commit("setIsLoading", false)
+                    commit("setUsers", { users : res.data.results});
+                  }, 3500
+                )
                 console.log("  users loaded ..." + res.data.results.length)
             })
             .catch(error => {
