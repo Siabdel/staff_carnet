@@ -1,9 +1,10 @@
 <template>
   <div  class="container">
     <ul class="list-group list-group-horizontal list-inline text-bold"> 
+         <li class="list-group-item"> <router-link to='/'> Accueil </router-link> </li>
          <li class="list-group-item"> <router-link to='/login'> Connexion </router-link></li>
          <li class="list-group-item"> <router-link to='/home'> Home </router-link> </li>
-         <li class="list-group-item"> <router-link to='/'> Accueil </router-link> </li>
+         <li class="list-group-item"> <router-link to='/users'> Contactes </router-link> </li>
     </ul>
 
     <router-view> </router-view>
@@ -16,9 +17,17 @@
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { mapActions } from "vuex";
+
 export default {
   name: 'App',
-  components: {
+  methods : {
+    ...mapActions(['loadUsers'])
+  },
+  
+  created(){
+    console.log("create APP.vue ...")
+    this.loadUsers()
   }
 }
 </script>
