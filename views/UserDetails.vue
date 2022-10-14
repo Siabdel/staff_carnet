@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 25rem;">
             <div class="card-header">
                 <img class="card-img-top" :src="selectedUser.picture.large">
             </div>
@@ -9,9 +9,14 @@
                 <p class="card-text">
                     Adresse :
                         {{ selectedUser.location.street.name }},
+                </p> 
+                <p class="card-text">
+                    ville :
                         {{ selectedUser.location.city }},
                         {{ selectedUser.location.state }},
                         {{ selectedUser.location.postcode }}
+                </p>
+                <p class="card-text">
                     Email : {{ selectedUser.email }}
                 </p>
             </div>
