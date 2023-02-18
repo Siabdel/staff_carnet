@@ -4,6 +4,7 @@
          <li class="list-group-item"> <router-link to='/login'> Connexion </router-link></li>
          <li class="list-group-item"> <router-link to='/'> Home </router-link> </li>
          <li class="list-group-item"> <router-link to='/users'> Contactes </router-link> </li>
+         <li class="list-group-item"> <router-link to='/calendar'> Calendar Meeting Selector</router-link> </li>
     </ul>
 
     <router-view> </router-view>

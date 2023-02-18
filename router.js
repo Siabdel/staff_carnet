@@ -4,6 +4,7 @@ import Home from './views/Home'
 import Login from './views/Login'
 import UsersList from './views/UsersList'
 import UserDetails from './views/UserDetails'
+import VueMeetingSelector from './views/VueMeetingSelector2'
 
 Vue.use(Router);
 
@@ -26,6 +27,11 @@ const router =  new Router({
             'name' : 'user',
             'path': "/user/:id", 
             'component'  : UserDetails,
+        },
+        {   
+            'name' : 'Calendar',
+            'path': "/calendar", 
+            'component'  : VueMeetingSelector,
         },
 
     ]
